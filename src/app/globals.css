@@ -2,32 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.onload {
+  animation: load .8s linear forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes load {
+  from {
+    filter: blur(5px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0px);
+    opacity: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.background {
+  --bg-lines-color: #050b21;
+  --bg-lines-width: 3px;
+  background-image:
+      linear-gradient(to right, var(--bg-lines-color) var(--bg-lines-width), transparent 1px),
+    linear-gradient(to bottom, var(--bg-lines-color) var(--bg-lines-width), transparent 1px);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.background-shadow {
+  box-shadow: 0 0 300px inset black;
 }
+/*
+
+colors: {
+        text: '#fdeee3',
+        background: '#030818',
+        primary: '#f3ab74',
+        secondary: '#0e8aa2',
+        accent: '#3f25ed'
+      },
+      keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: '0 0'
+          },
+          to: {
+            backgroundPosition: '-200% 0'
+          }
+        }
+      },
+      animation: {
+        shimmer: 'shimmer 2s linear infinite'
+      }
+*/
