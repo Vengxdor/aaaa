@@ -9,9 +9,9 @@ const sections = [
 ]
 
 export default function Navbar () {
-  const backdrop = useRef<HTMLLIElement>(null)
+  const backdrop = useRef<HTMLDivElement>(null)
 
-  const handleEnter = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+  const handleEnter = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     const target = e.target as HTMLLIElement
     const { left, top, height, width } = target.getBoundingClientRect()
 
@@ -31,26 +31,22 @@ export default function Navbar () {
     backdrop.current.style.visibility = 'hidden'
   }
   return (
-    <ul className="text-md sticky top-0 flex justify-center gap-3 py-10 ">
+    <nav className="text-md sticky top-0 flex justify-center gap-3 py-10 ">
       {sections.map((section) => (
-        <li
+        <a
+          className="px-3 py-1.5 text-white/80 transition-colors duration-300 hover:text-white"
+          href={section.link}
           onMouseLeave={handleLeave}
           onMouseEnter={handleEnter}
           key={section.name}
-          className="rounded-md py-0.5"
         >
-          <a
-            className="px-3 py-1.5 text-white/80 transition-colors duration-300 hover:text-white"
-            href={section.link}
-          >
-            {section.name}
-          </a>
-        </li>
+          {section.name}
+        </a>
       ))}
-      <li
+      <div
         className="absolute left-[var(--left)] top-[var(--top)] -z-10 h-[var(--height)] w-[var(--width)] rounded-md bg-zinc-800 backdrop-blur-lg transition-all delay-75 duration-300 ease-in-out"
         ref={backdrop}
-      ></li>
-    </ul>
+      ></div>
+    </nav>
   )
 }
