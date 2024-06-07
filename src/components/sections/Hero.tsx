@@ -1,9 +1,9 @@
 'use client'
 
-import { FlipWords } from '../../FlipWords'
-import { NavigateIcon } from '../../icons'
+import { FlipWords } from '@/components/FlipWords'
+import { NavigateIcon } from '@/components/icons'
 
-export default function Hero() {
+export default function Hero () {
   // todo: Add better things.
   const words = [
     'Front-end developer.',
