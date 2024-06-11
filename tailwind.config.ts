@@ -1,6 +1,5 @@
-const {
-  default: flattenColorPalette
-} = require('tailwindcss/lib/util/flattenColorPalette')
+/* eslint-disable import/no-named-default */
+import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -30,10 +29,35 @@ module.exports = {
           to: {
             backgroundPosition: '-200% 0'
           }
+        },
+        onload: {
+          '0%': {
+            opacity: '0',
+            translate: '0px 10%'
+          },
+          '50%': {
+            opacity: '.3',
+            translate: '0px 5%'
+          },
+          '100%': {
+            translate: '0px ',
+            opacity: '1'
+          }
+        },
+        'logo-cloud': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - 4rem))' }
         }
       },
       animation: {
-        shimmer: 'shimmer 2s linear infinite'
+        shimmer: 'shimmer 2s linear infinite',
+        'onload-slow': 'onload .4s linear',
+        'onload-mid': 'onload .3s linear',
+        'onload-fast': 'onload .3s linear',
+        'logo-cloud': 'logo-cloud 30s linear infinite'
+      },
+      boxShadow: {
+        x: 'inset -10px 0px 40px 0px rgba(0, 0, 0), inset 10px 0px 40px 0px rgba(0, 0, 0)'
       }
     }
   },
@@ -41,9 +65,10 @@ module.exports = {
 }
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme('colors'))
-  let newVars = Object.fromEntries(
+function addVariablesForColors ({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme('colors'))
+  const newVars = Object.fromEntries(
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   )
 
