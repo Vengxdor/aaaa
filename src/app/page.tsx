@@ -1,12 +1,14 @@
-import Navbar from '@/ui/Navbar'
-import Hero from '@/ui/sections/Hero'
+import Navbar from '@/components/ui/Navbar'
+import Hero from '@/components/sections/Hero'
+import Grid from '@/components/ui/Grid'
 
 export default function Home () {
   return (
     <>
       <Navbar />
-      <main className="mx-auto mt-10 w-[800px]">
+      <main className="mx-auto my-10 w-[860px]">
         <Hero />
+        <Grid />
       </main>
     </>
   )
