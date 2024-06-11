@@ -31,22 +31,24 @@ export default function Navbar () {
     backdrop.current.style.visibility = 'hidden'
   }
   return (
-    <nav className="text-md sticky top-0 flex justify-center gap-3 py-10 ">
-      {sections.map((section) => (
-        <a
-          className="px-3 py-1.5 text-white/80 transition-colors duration-300 hover:text-white"
-          href={section.link}
-          onMouseLeave={handleLeave}
-          onMouseEnter={handleEnter}
-          key={section.name}
-        >
-          {section.name}
-        </a>
-      ))}
-      <div
-        className="absolute left-[var(--left)] top-[var(--top)] -z-10 h-[var(--height)] w-[var(--width)] rounded-md bg-zinc-800 backdrop-blur-lg transition-all delay-75 duration-300 ease-in-out"
-        ref={backdrop}
-      ></div>
+    <nav className="text-md sticky top-0 z-50 flex justify-center py-10">
+      <div className='flex justify-center gap-3 rounded-lg bg-zinc-600/30 p-1'>
+        {sections.map((section) => (
+          <a
+            className="relative z-20 px-3 py-1.5 text-white/80 transition-colors duration-300 hover:text-white"
+            href={section.link}
+            onMouseLeave={handleLeave}
+            onMouseEnter={handleEnter}
+            key={section.name}
+          >
+            {section.name}
+          </a>
+        ))}
+        <div
+          className="absolute left-[var(--left)] top-[var(--top)] z-10 h-[var(--height)] w-[var(--width)] rounded-md bg-zinc-800 backdrop-blur-lg transition-all delay-75 duration-300 ease-in-out"
+          ref={backdrop}
+        ></div>
+      </div>
     </nav>
   )
 }
