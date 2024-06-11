@@ -4,6 +4,7 @@ import { BentoGrid, BentoGridItem } from '../BentoGrid'
 import Carousel from './Carousel'
 
 import GridPattern from './GridPattern'
+import { IconCloudDemo } from './Cloud'
 
 export default function Grid () {
   return (
@@ -45,20 +46,16 @@ const Information = () => (
 
 const gridItems = [
   {
-    title: 'The Dawn of Innovation',
-    description: 'Explore the birth of groundbreaking ideas and inventions.',
-    header: (
-      <img
-        className="size-full rounded-xl object-cover"
-        src="/author.jpg"
-        alt=""
-      />
-    )
+    // header: (
+    //   <img
+    //     className="size-full rounded-xl object-cover"
+    //     src="/author.jpg"
+    //     alt=""
+    //   />
+    // )
   },
   {
-    title: 'The Digital Revolution',
-    description: 'Dive into the transformative power of technology.',
-    header: <Information />
+    // header: <Information />
   },
   {
     title: 'The Art of Design',
@@ -66,10 +63,7 @@ const gridItems = [
     header: <Skeleton />
   },
   {
-    title: 'The Power of Communication',
-    description:
-      'Understand the impact of effective communication in our lives.',
-    header: <Skeleton />
+    header: <IconCloudDemo />
   },
 
   {
