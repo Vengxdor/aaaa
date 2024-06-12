@@ -17,8 +17,8 @@ module.exports = {
       colors: {
         text: '#fdeee3',
         background: '#030818',
-        primary: '#f3ab74',
-        secondary: '#0e8aa2',
+        secundary: '#f3ab74',
+        primary: '#0e8aa2',
         accent: '#3f25ed'
       },
       keyframes: {
