@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto_Condensed } from 'next/font/google'
 import './globals.css'
+import { Toaster } from 'sonner'
 
 const inter = Roboto_Condensed({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout ({
           <div className="background-shadow  absolute inset-0 -z-10"></div>
         </div>
         {children}
+        <Toaster richColors/>
       </body>
     </html>
   )
