@@ -47,6 +47,14 @@ module.exports = {
         'logo-cloud': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - 4rem))' }
+        },
+        meteor: {
+          '0%': { transform: 'rotate(215deg) translateX(0)', opacity: '1' },
+          '70%': { opacity: '1' },
+          '100%': {
+            transform: 'rotate(215deg) translateX(-500px)',
+            opacity: '0'
+          }
         }
       },
       animation: {
@@ -54,7 +62,8 @@ module.exports = {
         'onload-slow': 'onload .4s linear',
         'onload-mid': 'onload .3s linear',
         'onload-fast': 'onload .3s linear',
-        'logo-cloud': 'logo-cloud 30s linear infinite'
+        'logo-cloud': 'logo-cloud 30s linear infinite',
+        'meteor-effect': 'meteor 5s linear infinite'
       },
       boxShadow: {
         x: 'inset -10px 0px 40px 0px rgba(0, 0, 0), inset 10px 0px 40px 0px rgba(0, 0, 0)'
