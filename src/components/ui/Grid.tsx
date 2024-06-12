@@ -33,10 +33,13 @@ const Contact = () => {
           <a
             className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
             href="#"
+            aria-label='See my linkedin profile'
           >
             <LinkedinIcon />
           </a>
           <button
+            aria-label='copy email'
+            role='button'
             onClick={handleCopy}
             className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
           >
@@ -45,6 +48,7 @@ const Contact = () => {
           <a
             className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
             href="#"
+            aria-label='See my twitter profile'
           >
             <TwitterIcon />
           </a>
