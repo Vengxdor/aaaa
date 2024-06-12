@@ -69,19 +69,23 @@ export default function IconCloud ({ iconSlugs }: DynamicCloudProps) {
   const { theme } = useTheme()
 
   useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData)
+    fetchSimpleIcons({ slugs: iconSlugs })
+      .then(setData)
+      .catch((error) => {
+        console.error(error)
+      })
   }, [iconSlugs])
 
   const renderedIcons = useMemo(() => {
     if (data === null) return null
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || 'light')
+      renderCustomIcon(icon, theme ?? 'light')
     )
   }, [data, theme])
 
   return (
-    // @ts-expect-error just because
+    // @ts-expect-error wrong types
     <Cloud {...cloudProps}>
       <>{renderedIcons}</>
     </Cloud>
