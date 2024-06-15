@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .background {
   --bg-lines-color: #050b21;
   --bg-lines-width: 3px;
