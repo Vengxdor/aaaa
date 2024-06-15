@@ -13,13 +13,12 @@ const slugs = [
   'visualstudiocode',
   'tailwindcss',
   'redux',
-  'vite',
-  ''
+  'vite'
 ]
 
 export default function CloudOfIcons () {
   return (
-    <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-xl bg-background pb-6">
+    <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-xl bg-black pb-6">
       <IconCloud iconSlugs={slugs} />
     </div>
   )
