@@ -45,7 +45,7 @@ export default function Navbar () {
           </a>
         ))}
         <div
-          className="absolute left-[var(--left)] top-[var(--top)] z-10 h-[var(--height)] w-[var(--width)] rounded-md bg-zinc-800 backdrop-blur-lg transition-all delay-75 duration-300 ease-in-out"
+          className="absolute left-[var(--left)] top-[var(--top)] z-10 h-[var(--height)] w-[var(--width)] rounded-md bg-zinc-800 backdrop-blur-lg transition-all delay-75 duration-200 ease-in-out"
           ref={backdrop}
         ></div>
       </div>
