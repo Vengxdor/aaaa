@@ -15,5 +15,5 @@ html {
 }
 
 .background-shadow {
-  box-shadow: 0 0 300px inset black;
+  box-shadow: 0 0 300px 50px inset #030818;
 }
