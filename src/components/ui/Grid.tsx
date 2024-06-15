@@ -1,27 +1,13 @@
-'use client'
 import React from 'react'
 import { BentoGrid, BentoGridItem } from '../BentoGrid'
 
 import GridPattern from './GridPattern'
 import CloudOfIcons from './Cloud'
-import { EmailIcon, LinkedinIcon, TwitterIcon } from '../icons'
-import { toast } from 'sonner'
+import { LinkedinIcon, TwitterIcon } from '../icons'
 import { Meteors } from '../Meteors'
+import EmailButton from './EmailButton'
 
 const Contact = () => {
-  const handleCopyEmail = async () => {
-    try {
-      toast.success('Email copied.')
-      await navigator.clipboard.writeText('Stevenfernandeztango3@gmail.com')
-    } catch (error) {
-      console.error(error)
-    }
-  }
-  const handleCopy = () => {
-    handleCopyEmail().catch((err) => {
-      console.error(err)
-    })
-  }
   return (
     <>
       <div className="relative z-10 size-full overflow-hidden p-3 pt-7">
@@ -32,22 +18,15 @@ const Contact = () => {
         <div className="mt-10 flex items-center justify-center gap-3 text-6xl">
           <a
             className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
-            href="#"
+            href="https://www.linkedin.com/in/steven-fernandez-11a522274/"
             aria-label='See my linkedin profile'
           >
             <LinkedinIcon />
           </a>
-          <button
-            aria-label='copy email'
-            role='button'
-            onClick={handleCopy}
-            className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
-          >
-            <EmailIcon />
-          </button>
+          <EmailButton />
           <a
             className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
-            href="#"
+            href="https://x.com/Steven_dev2"
             aria-label='See my twitter profile'
           >
             <TwitterIcon />
