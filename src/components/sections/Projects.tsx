@@ -12,7 +12,7 @@ const projects: Project[] = [
     iconLists: [
       <ReactIcon key="reactIcon" />,
       <TailwindIcon key="tailwindIcon" />,
-      <TypescriptIcon key="typescriptIcon"/>
+      <TypescriptIcon key="typescriptIcon" />
     ]
   },
   {

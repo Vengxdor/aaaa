@@ -7,7 +7,7 @@ const inter = Roboto_Condensed({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Steven's Portfolio - Front end Developer",
-  description: 'TODO'
+  description: 'Front-end developer for people who need a functional and attractive project.'
 }
 
 export default function RootLayout ({
