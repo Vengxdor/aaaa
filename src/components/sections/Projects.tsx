@@ -1,5 +1,6 @@
 import { type Project } from '../../../types'
 import { ReactIcon, TailwindIcon, TypescriptIcon } from '../icons'
+import { FadeInSection } from '../ui/FadeInSection'
 import ProjectItem from '../ui/ProjectItem'
 
 const projects: Project[] = [
@@ -31,9 +32,11 @@ const projects: Project[] = [
 export default function Projects () {
   return (
     <section id="projects">
-      <h2 className="mt-10 py-16 text-center text-5xl font-semibold">
-        Some of my <span className="text-primary">projects</span>
-      </h2>
+      <FadeInSection>
+        <h2 className="mt-10 py-16 text-center text-5xl font-semibold">
+          Some of my <span className="text-primary">projects</span>
+        </h2>
+      </FadeInSection>
       <ul className="grid grid-cols-1 md:grid-cols-2">
         <ProjectItem projects={projects} />
       </ul>
