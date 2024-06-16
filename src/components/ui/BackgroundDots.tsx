@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 interface DotPatternBackgroundProps {
   dotSize?: number
   dotColor?: string
