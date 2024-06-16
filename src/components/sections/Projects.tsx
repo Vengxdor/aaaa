@@ -37,9 +37,11 @@ export default function Projects () {
           Some of my <span className="text-primary">projects</span>
         </h2>
       </FadeInSection>
-      <ul className="grid grid-cols-1 md:grid-cols-2">
-        <ProjectItem projects={projects} />
-      </ul>
+      <FadeInSection>
+        <ul className="grid grid-cols-1 md:grid-cols-2">
+          <ProjectItem projects={projects} />
+        </ul>
+      </FadeInSection>
     </section>
   )
 }
