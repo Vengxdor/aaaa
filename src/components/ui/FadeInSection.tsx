@@ -16,7 +16,7 @@ export const FadeInSection = ({ children }: Props) => {
     <div
       ref={containerRef as React.RefObject<HTMLDivElement> | null}
       className={`translate-y-5 opacity-0 transition duration-500 ${
-        isVisible !== null ? 'translate-y-5 opacity-100' : ''
+        isVisible !== false ? 'translate-y-0 opacity-100' : ''
       }`}
     >
       {children}
