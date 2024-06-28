@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { toast } from 'sonner'
-import { EmailIcon } from '../icons'
+import { EmailIcon } from './ui/icons'
 
 function EmailButton () {
   const handleCopyEmail = async () => {

@@ -1,7 +1,7 @@
-import { type Project } from '../../../types'
-import { ReactIcon, TailwindIcon, TypescriptIcon } from '../icons'
-import { FadeInSection } from '../ui/FadeInSection'
-import ProjectItem from '../ui/ProjectItem'
+import { type Project } from '@/../types'
+import { ReactIcon, TailwindIcon, TypescriptIcon } from './ui/icons'
+import { FadeInSection } from './ui/FadeInSection'
+import ProjectItem from './ui/ProjectItem'
 
 const projects: Project[] = [
   {

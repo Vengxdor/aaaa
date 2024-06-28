@@ -1,8 +1,8 @@
 'use client'
 
 import { type Project } from '../../../types'
-import { PinContainer } from '../3dPin'
-import { NavigateIcon } from '../icons'
+import { PinContainer } from './3dPin'
+import { NavigateIcon } from './icons'
 
 interface Props {
   projects: Project[]

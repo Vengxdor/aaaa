@@ -1,10 +1,10 @@
 import React from 'react'
-import { BentoGrid, BentoGridItem } from '../BentoGrid'
+import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
 
-import GridPattern from './GridPattern'
+import GridPattern from './ui/GridPattern'
 import CloudOfIcons from './Cloud'
-import { LinkedinIcon, TwitterIcon } from '../icons'
-import { Meteors } from '../Meteors'
+import { LinkedinIcon, TwitterIcon } from './ui/icons'
+import { Meteors } from './ui/Meteors'
 import EmailButton from './EmailButton'
 
 const Contact = () => {
@@ -19,7 +19,7 @@ const Contact = () => {
           <a
             className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
             href="https://www.linkedin.com/in/steven-fernandez-11a522274/"
-            aria-label='See my linkedin profile'
+            aria-label="See my linkedin profile"
           >
             <LinkedinIcon />
           </a>
@@ -27,7 +27,7 @@ const Contact = () => {
           <a
             className="opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
             href="https://x.com/Steven_dev2"
-            aria-label='See my twitter profile'
+            aria-label="See my twitter profile"
           >
             <TwitterIcon />
           </a>

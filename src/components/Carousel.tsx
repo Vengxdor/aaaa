@@ -9,8 +9,8 @@ import {
   ReduxIcon,
   TailwindIcon,
   ViteIcon
-} from '../icons'
-import BackgroundDots from './BackgroundDots'
+} from './ui/icons'
+import BackgroundDots from './ui/BackgroundDots'
 
 /* eslint-disable @next/next/no-img-element */
 const logos = [

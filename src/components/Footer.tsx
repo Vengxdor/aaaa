@@ -1,5 +1,5 @@
-import { GitHubIcon, LinkedinIcon, TwitterIcon } from '../icons'
-import EmailButton from '../ui/EmailButton'
+import { GitHubIcon, LinkedinIcon, TwitterIcon } from './ui/icons'
+import EmailButton from './EmailButton'
 
 export default function Footer () {
   return (
