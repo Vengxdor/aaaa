@@ -7,11 +7,11 @@ import Footer from '@/components/Footer'
 export default function Home () {
   return (
     <>
-      <Navbar />
       <main className="mx-auto my-10 w-[860px]">
         <Hero />
         <Grid />
         <Projects />
+        <Navbar />
       </main>
       <Footer />
     </>
